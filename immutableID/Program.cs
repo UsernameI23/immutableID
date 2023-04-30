@@ -1,10 +1,12 @@
-﻿using System;
+using System;
 using System.Net;
 
-class Student
+class Program
+{
+public record Student
 {
     // auto-implemented properties
-    public int Id { get; set; }
+    public int Id { get; init; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
 
@@ -28,7 +30,6 @@ class Student
         Student student = new(32,"Emma", "Madison");
         Console.WriteLine(student);
         Student student2 = new();
-        student2.Id = 45;
         student2.FirstName = "James";
         student2.LastName = "Williams";
         Console.WriteLine(student2);
@@ -37,3 +38,5 @@ class Student
 
     }
 }
+}
+
